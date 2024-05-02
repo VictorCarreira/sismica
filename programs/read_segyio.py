@@ -2,7 +2,7 @@ import segyio
 import numpy as np
 import matplotlib.pyplot as plt
 
-segyfile = '0219-0258-00-migpstm-20061201.sgy'
+segyfile = '../inputs/0219-0258-00-migpstm-20061201.sgy'
 
 f = segyio.open(segyfile, ignore_geometry=True)
 
