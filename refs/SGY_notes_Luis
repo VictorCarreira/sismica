@@ -9,13 +9,17 @@ sudo mv pastas/ /pasta(destino)
 
 rm *.(nome no arquivo)
 
-sudo chmod 777 /opt/ … / * - Permissão para usuarios
+cd  /opt/SeismicUnix/bin
+sudo chmod 777 * - Permissão para usuarios
 
 vi .bashrc - editar arquivo i
 
- $CWPROOT
+ $CWPROOT=/opt/SeismicUnix
+ $ PATH=$PATH:$CWPROOT/bin:
 
 $ suplane | suximage &
+ou
+$ suplane | suxwigb  &
 
 
 Carregando o dado e visualização
@@ -25,7 +29,7 @@ gisis@LD17:~$ segyread tape=0219-0258-00-migpstm-20061201.sgy >migpstm.su
 
 :~$ surange <migpstm.su | more
 
-$ suximage <migpstm.su perc-99
+$ suximage <migpstm.su perc=99
 
 
 
@@ -39,3 +43,5 @@ Examples of filters:
  Lowpass:    sufilter <data f=10,20,40,50 amps=1.,1.,0.,0. | ...
  Highpass:   sufilter <data f=10,20,40,50 amps=0.,0.,1.,1. | ...
  Notch:      sufilter <data f=10,12.5,35,50,60 amps=1.,.5,0.,.5,1. |..
+
+ Exemplo: sufilter <migpstm.su f=10,20,40,50 amps=1.,1.,0.,0. | >migpstm_filt.su
