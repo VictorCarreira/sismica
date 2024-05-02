@@ -1,0 +1,41 @@
+como criar usario Ubuntu
+wsl –unregister Ubuntu
+wsl – Install 
+
+Instalar python3 Ubuntu
+sudo install apt python3-pip
+
+sudo mv pastas/ /pasta(destino)
+
+rm *.(nome no arquivo)
+
+sudo chmod 777 /opt/ … / * - Permissão para usuarios
+
+vi .bashrc - editar arquivo i
+
+ $CWPROOT
+
+$ suplane | suximage &
+
+
+Carregando o dado e visualização
+
+
+gisis@LD17:~$ segyread tape=0219-0258-00-migpstm-20061201.sgy >migpstm.su
+
+:~$ surange <migpstm.su | more
+
+$ suximage <migpstm.su perc-99
+
+
+
+SUFILTER
+Phase zero - Filtro/Convolução - Ajuste de deslocamento do sinal, nesse caso n há deslocamento da wavelet
+
+freq e ampitude
+Examples of filters:
+ Bandpass:   sufilter <data f=10,20,40,50 | ...
+ Bandreject: sufilter <data f=10,20,30,40 amps=1.,0.,0.,1. | ..
+ Lowpass:    sufilter <data f=10,20,40,50 amps=1.,1.,0.,0. | ...
+ Highpass:   sufilter <data f=10,20,40,50 amps=0.,0.,1.,1. | ...
+ Notch:      sufilter <data f=10,12.5,35,50,60 amps=1.,.5,0.,.5,1. |..
