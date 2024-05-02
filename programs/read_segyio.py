@@ -84,7 +84,8 @@ power = np.abs(X)**2
 
 # Plot power spectrum
 plt.figure(9, figsize=(15,5))
-plt.plot(freqs[:len(freqs)//2], power[:len(freqs)//2])
+plt.plot(freqs[:len(freqs)//2], power[:len(freqs)//2]) # LIMITADO
+#plt.plot(freqs, power) # NÃO LIMITADO
 plt.xlabel('Frequency (Hz)')
 plt.ylabel('Power')
 plt.title('Power Spectrum')
